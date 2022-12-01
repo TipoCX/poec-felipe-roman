@@ -14,7 +14,7 @@ const Home = ({title}:params) => {
         <h1>{title}</h1>
         <div className="btn_container">
           <CustomBtn name='ClassRoom' url='https://classroom.google.com/c/Mjg0MDIzNjg3MTQ4'/>
-          <CustomBtn name='GitHub' url='https://github.com/'/>
+          <CustomBtn name='GitHub' url='https://github.com/TipoCX/poec-felipe-roman.git'/>
         </div>
     </div>
   );
