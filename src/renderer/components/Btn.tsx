@@ -1,11 +1,12 @@
-type parms = {
+type params = {
   url: string,
   name: string
-}
+};
 
-const CustomBtn = ({url, name}: parms) =>{
+
+const CustomBtn = ({url, name}: params) =>{
   return (
-    <a target='blank' href={url}>
+    <a target='_blank' href={url}>
       <button>
         {name}
       </button>

@@ -72,3 +72,79 @@ a:hover {
   justify-content: space-around;
   align-items: center;
 }
+
+.body {
+  min-width: 750px;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 92%;
+  height: 70%;
+  background-color: slategrey;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.img-container {
+  position: static;
+  right: 10px;
+  margin-left: 30px;
+}
+
+.img-container img {
+  width: 250px;
+  border-radius: 300px;
+}
+
+.inputs {
+  min-width: 50%;
+  margin-inline: 10px;
+}
+
+input {
+  width: 125px;
+  border-radius: 5px;
+  border: 0px none;
+  height: 20px;
+  margin-inline: 2px;
+}
+
+.fake-inp {
+  width: 125px;
+  border-radius: 5px;
+  height: 20px;
+  margin-inline: 2px;
+  background: linear-gradient(90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: skeleton-anim 15s ease infinite;
+}
+
+.inputs div {
+  margin-block: 20px;
+}
+
+textarea {
+  max-width: 340px;
+  max-height: 200px;
+  border: 0px none;
+  border-radius: 5px;
+}
+
+
+@keyframes skeleton-anim {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
