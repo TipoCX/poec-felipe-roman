@@ -4,44 +4,71 @@ import '../App.css';
 
 
 const Profile = () => {
+  const [mode, setMode] = useState("skeleton");
   const [title, setTitle] = useState("Cargando...");
+  const [name, setName] = useState("Felipe");
+  const [lastName, setLastName] = useState("Roman");
+  const [age, setAge] = useState("19");
+  const [dateBirth, setDateBirth] = useState("17-11-2003");
+  const [DNI, setDNI] = useState("0");
+  const [fav, setFav] = useState("conpu");
+
+
   useEffect(()=>{
     setTimeout(()=>{
+      setMode("read")
       setTitle("My Profile")
-    }, 30000)
+    }, 3000)
   },
-  [title]);
+  []);
+
+
 
   return(
     <div className='body'>
       <h1> {title} </h1>
-      <button onClick={e => setTitle("Cargando...")}></button>
     <div className="container">
 
       <div className="inputs">
 
-        <div className="1row">
-          {title === "Cargando..."? <div className='fake-inp'></div> : <input placeholder='Name' type="text" />}
-          {title === "Cargando..."? <div className='fake-inp'></div> : <input placeholder='Lastname' type="text" />}
+        <div className="row">
+          {mode === "skeleton"? <div className='fake-inp'></div> : <span></span> }
+          {mode === "write"? <input value={name} onChange={(e) => setName(e.target.value)} placeholder='Name' type="text" /> : <span></span> }
+          {mode === "read" ? <p>{name}</p> : <span></span> }
+
+          {mode === "skeleton" ? <div className='fake-inp'></div> : <span></span> }
+          {mode === "write" ? <input value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder='Lastname' type="text" /> : <span></span> }
+          {mode === "read" ? <p>{lastName}</p> : <span></span> }
         </div>
 
-        <div className="2row">
-          {title === "Cargando..."? <div className='fake-inp'></div> : <input placeholder='Age' type="number" />}
-          {title === "Cargando..."? <div className='fake-inp'></div> : <input placeholder='Birth Date' type="text" />}
+        <div className="row">
+          {mode === "skeleton"? <div className='fake-inp'></div> : <span></span> }
+          {mode === "write" ? <input value={age} onChange={(e) => setAge(e.target.value)} placeholder='Age' type="number" /> : <span></span> }
+          {mode === "read" ? <p>{age}</p> : <span></span> }
+
+          {mode === "skeleton" ? <div className='fake-inp'></div> : <span></span> }
+          {mode === "write" ? <input value={dateBirth} onChange={(e) => setDateBirth(e.target.value)} placeholder='Birth Date' type="text" /> : <span></span> }
+          {mode === "read" ? <p>{dateBirth}</p> : <span></span> }
         </div>
 
-        <div className="3row">
-          {title === "Cargando..."? <div className='fake-inp'></div> : <input placeholder='DNI' type="text" />}
+        <div className="row">
+          {mode === "skeleton" ? <div className='fake-inp'></div>: <span></span> }
+          {mode === "write" ? <input value={DNI} onChange={(e) => setDNI(e.target.value)} placeholder='DNI' type="number" />: <span></span> }
+          {mode === "read" ? <p>{DNI}</p>: <span></span> }
         </div>
 
-        <div className="4row">
-          {title === "Cargando..."? <div className='fake-area'></div> : <textarea placeholder='Favorite Thing' name="fav" cols={30} rows={10}></textarea>}
+        <div className="row">
+          {mode === "skeleton" ? <div className='fake-area'></div> : <span></span> }
+          {mode === "write" ? <textarea value={fav} onChange={(e) => setFav(e.target.value)} placeholder='Favorite Thing' name="fav" cols={30} rows={10}></textarea> : <span></span> }
+          {mode === "read" ? <p>{fav}</p> : <span></span> }
         </div>
 
       </div>
       <div className="img-container">
 
         {title === "Cargando..."? <div className='fake-img'></div> : <img src={icon} alt="icon" />}
+
+        {mode === "skeleton" ? <div className=''></div> : <span></span> }
 
       </div>
       </div>

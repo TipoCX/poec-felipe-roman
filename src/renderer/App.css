@@ -84,7 +84,7 @@ a:hover {
   flex-direction: row;
   width: 92%;
   height: 70%;
-  background-color: slategrey;
+  backdrop-filter: hue-rotate(-20deg);
   border-radius: 20px;
   padding: 30px;
 }
@@ -100,9 +100,19 @@ a:hover {
   border-radius: 300px;
 }
 
+.fake-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 300px;
+  background: linear-gradient(90deg, #888888, #a1a1a1);
+  background-size: 400% 400%;
+  animation: skeleton-anim 3s linear infinite alternate;
+}
+
 .inputs {
   min-width: 50%;
   margin-inline: 10px;
+  height: 320px;
 }
 
 input {
@@ -113,18 +123,28 @@ input {
   margin-inline: 2px;
 }
 
+p {
+  height: 20px;
+  margin: 0;
+  margin-inline: 2px;
+  width: 125px;
+}
+
 .fake-inp {
+  margin-block: 0px;
   width: 125px;
   border-radius: 5px;
   height: 20px;
   margin-inline: 2px;
-  background: linear-gradient(90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(90deg, #888888, #a1a1a1);
   background-size: 400% 400%;
-  animation: skeleton-anim 15s ease infinite;
+  animation: skeleton-anim 3s linear infinite alternate;
 }
 
-.inputs div {
+.inputs .row {
   margin-block: 20px;
+  display: flex;
+  flex-direction: row;
 }
 
 textarea {
@@ -134,17 +154,21 @@ textarea {
   border-radius: 5px;
 }
 
+.fake-area {
+  margin-block: unset;
+  width: 261px;
+  height: 154px;
+  background: linear-gradient(90deg, #888888, #a1a1a1);
+  background-size: 200% 200%;
+  animation: skeleton-anim 3s linear infinite alternate;
+}
 
 @keyframes skeleton-anim {
   0% {
     background-position: 0% 50%;
   }
 
-  50% {
-    background-position: 100% 50%;
-  }
-
   100% {
-    background-position: 0% 50%;
+    background-position: 100% 50%;
   }
 }
