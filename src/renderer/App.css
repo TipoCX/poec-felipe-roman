@@ -111,6 +111,7 @@ a:hover {
   background: linear-gradient(90deg, #888888, #a1a1a1);
   background-size: 400% 400%;
   animation: skeleton-anim 3s linear infinite alternate;
+  margin-bottom: 10px;
 }
 
 .inputs {
@@ -164,6 +165,15 @@ textarea {
   height: 154px;
   background: linear-gradient(90deg, #888888, #a1a1a1);
   background-size: 200% 200%;
+  animation: skeleton-anim 3s linear infinite alternate;
+}
+
+.fake-btn {
+  width: 87px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #888888, #a1a1a1);
+  background-size: 400% 400%;
   animation: skeleton-anim 3s linear infinite alternate;
 }
 
