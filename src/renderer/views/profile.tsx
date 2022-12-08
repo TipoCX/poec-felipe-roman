@@ -68,7 +68,11 @@ const Profile = () => {
 
         {title === "Cargando..."? <div className='fake-img'></div> : <img src={icon} alt="icon" />}
 
-        {mode === "skeleton" ? <div className=''></div> : <span></span> }
+        {mode === "skeleton" ? <div className='fake-btn'></div> : <span></span> }
+        {mode === "write" ? <button style={{"backgroundColor": "blue"}} onClick={(e) => setMode("read")}>Save</button> : <span></span> }
+        {mode === "read" ? <button style={{"backgroundColor": "green"}} onClick={(e) => setMode("write")}>Edit</button> : <span></span> }
+
+
 
       </div>
       </div>
