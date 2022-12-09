@@ -10,6 +10,9 @@ const Profile = () => {
   const [lastName, setLastName] = useState("Roman");
   const [age, setAge] = useState("19");
   const [dateBirth, setDateBirth] = useState("17-11-2003");
+  const [numb, setNumb] = useState("'2972999999");
+  const [addrss, setaddrss] = useState("mi casa");
+
   const [DNI, setDNI] = useState("0");
   const [fav, setFav] = useState("conpu");
 
@@ -49,6 +52,16 @@ const Profile = () => {
           {mode === "skeleton" ? <div className='fake-inp'></div> : <span></span> }
           {mode === "write" ? <input value={dateBirth} onChange={(e) => setDateBirth(e.target.value)} placeholder='Birth Date' type="text" /> : <span></span> }
           {mode === "read" ? <p>{dateBirth}</p> : <span></span> }
+        </div>
+
+        <div className="row">
+          {mode === "skeleton"? <div className='fake-inp'></div> : <span></span> }
+          {mode === "write" ? <input value={numb} onChange={(e) => setNumb(e.target.value)} placeholder='Telephone number' type="text" /> : <span></span> }
+          {mode === "read" ? <p>{numb}</p> : <span></span> }
+
+          {mode === "skeleton" ? <div className='fake-inp'></div> : <span></span> }
+          {mode === "write" ? <input value={addrss} onChange={(e) => setaddrss(e.target.value)} placeholder='address' type="text" /> : <span></span> }
+          {mode === "read" ? <p>{addrss}</p> : <span></span> }
         </div>
 
         <div className="row">
