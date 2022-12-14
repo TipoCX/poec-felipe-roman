@@ -3,7 +3,6 @@
  *        See https://github.com/webpack-contrib/sass-loader#imports
  */
 body {
-  position: relative;
   color: white;
   height: 100vh;
   background: linear-gradient(200.96deg,
@@ -129,10 +128,10 @@ input {
 }
 
 p {
-  height: 20px;
+  height: 22px;
   margin: 0;
   margin-inline: 2px;
-  width: 125px;
+  width: 129px;
 }
 
 .fake-inp {
@@ -185,4 +184,47 @@ textarea {
   100% {
     background-position: 100% 50%;
   }
+}
+
+.openMenu {
+  position: relative;
+  top: 0px;
+  height: 15px;
+  font-size: small;
+  border: 0px;
+  border-radius: 0px;
+  padding: 0px;
+  margin-inline: 5px;
+  background-color: #3d3d3d;
+}
+
+.openMenu:hover {
+  position: relative;
+  top: 0px;
+  height: 15px;
+  font-size: small;
+  border: 0px;
+  border-radius: 0px;
+  padding: 0px;
+  margin-inline: 5px;
+  transform: scale(1);
+  background-color: #4d4d4d;
+}
+
+.dropbtn {
+  margin-block: 2px;
+}
+
+#topBar {
+  width: 100%;
+  height: 17px;
+  position: absolute;
+  padding: 0;
+  top: 0;
+  left: 0;
+  background-color: #3d3d3d;
+}
+
+.topBarMenu {
+  background-color: #3d3d3d;
 }
