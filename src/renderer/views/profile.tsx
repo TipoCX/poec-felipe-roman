@@ -5,6 +5,7 @@ import '../App.css';
 
 const Profile = () => {
   const [mode, setMode] = useState("skeleton");
+
   const [title, setTitle] = useState("Cargando...");
   const [name, setName] = useState("Felipe");
   const [lastName, setLastName] = useState("Roman");
@@ -12,7 +13,6 @@ const Profile = () => {
   const [dateBirth, setDateBirth] = useState("17-11-2003");
   const [numb, setNumb] = useState("'2972999999");
   const [addrss, setaddrss] = useState("mi casa");
-
   const [DNI, setDNI] = useState("0");
   const [fav, setFav] = useState("conpu");
 
