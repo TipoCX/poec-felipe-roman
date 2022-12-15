@@ -1,6 +1,16 @@
 import { contextBridge, ipcRenderer, IpcRendererEvent } from 'electron';
 
-export type Channels = 'ipc-example';
+export type Channels = 'ipc-example' | 'minimize' | 'exitApp';
+
+contextBridge.exposeInMainWorld('algomas', {
+    minApp(){
+      ipcRenderer.send('minimize', []);
+    },
+    closeApp(){
+      ipcRenderer.send('exitApp', []);
+    }
+  }
+  );
 
 contextBridge.exposeInMainWorld('electron', {
   ipcRenderer: {
